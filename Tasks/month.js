@@ -1,9 +1,8 @@
 // Get month number
 
-// Step 5
+// Step 6
 //
-// Remove loop and 'return'
-// Use '.findIndex' to find index of month needed
+// Add 'return' with condition
 
 'use strict'
 
@@ -24,7 +23,8 @@ const MONTHS_NAMES = [
 
 const getMonthNumber = (input) => {
   const lowercaseInput = input.toLowerCase();
-  const result = MONTHS_NAMES.findIndex(month => lowercaseInput.startsWith(month));
+  const result = MONTHS_NAMES.findIndex((month) => lowercaseInput.startsWith(month));
+  return result >= 0 ? result + 1 : result;
 };
 
 module.exports = getMonthNumber;
