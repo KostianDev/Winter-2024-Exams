@@ -1,8 +1,9 @@
 // Get day number
 
-// Step 3
+// Step 4
 //
-// Change loop to 'Array.findIndex'
+// Remove unneeded code
+// Add 'return' with condition
 
 'use strict'
 
@@ -10,10 +11,7 @@ const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const getDayNumber = (input) => {
   const result = dayNames.findIndex((day) => input.startsWith(day.toLowerCase()))
-    if (input.startsWith(dayNames[i].toLowerCase())) {
-      return i + 1;
-    }
-  return -1;
+  return result >= 0 ? result + 1 : result;
 };
 
 module.exports = getDayNumber;
