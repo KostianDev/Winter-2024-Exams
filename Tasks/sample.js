@@ -1,15 +1,13 @@
 // Get one random element from an array
 
-// Step 1
+// Step 2
 //
-// Add 'use strict'
-// Improve naming
+// Remove redundant variable
 
 'use strict'
 
 const getRandomElement = (inputArray) => {
-  inputArray = inputArray[Math.floor(Math.random() * inputArray.length)];
-  return inputArray;
+  return inputArray[Math.floor(Math.random() * inputArray.length)];
 };
 
 module.exports = getRandomElement;
