@@ -1,9 +1,8 @@
 // Extract substring between prefix and suffix
 
-// Step 5
+// Step 6
 //
-// Changed substring area
-// Removed unneeded code
+// Added variable to stop changing incoming parameters
 
 'use strict'
 
@@ -12,9 +11,9 @@ const getSubstringBetween = (string, prefix, suffix) => {
   const endIndex = string.indexOf(suffix);
   if (startIndex === -1 || endIndex === -1) return '';
   else {
-    string = string.substring(startIndex, endIndex);
+    const extractedString = string.substring(startIndex, endIndex);
   }
-  return string;
+  return extractedString;
 };
 
 module.exports = getSubstringBetween;
