@@ -1,22 +1,15 @@
 // Return an array without duplicates
 
-// Step 2
+// Step 3
 //
-// Add 'const' and 'let'
-// Replace loop with for...of
+// Remove unneeded code
 
 'use strict'
 
 const getDistinctArray = (initialArray) => {
-  const distinctArray = new Set();
-  let w = 0;
+  const distinctSet = new Set();
   for (const element of initialArray) {
-    if (distinctArray.has(element)) {
-      delete initialArray[w];
-    } else {
-      distinctArray.add(element);
-    }
-    w++;
+      distinctSet.add(element);
   }
   return initialArray.filter
   (x => typeof x === 'number');
