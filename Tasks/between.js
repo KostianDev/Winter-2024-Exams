@@ -1,17 +1,17 @@
 // Extract substring between prefix and suffix
 
-// Step 3
+// Step 4
 //
-// Connected two conditions
-// Removed unneeded code
+// Changed 'startIndex' and 'endIndex'
+// Changed 'startIndex' declaration to 'const'
 
 'use strict'
 
 const getSubstringBetween = (string, prefix, suffix) => {
-  let startIndex = string.indexOf(prefix);
+  const startIndex = string.indexOf(prefix) + prefix.length;
+  const endIndex = string.indexOf(suffix);
   if (startIndex === -1 || endIndex === -1) return '';
   else {
-    const endIndex = startIndex + prefix.length;
     string = string.substring(endIndex);
     startIndex = string.indexOf(suffix);
   }
