@@ -1,17 +1,17 @@
 // Get day number
 
-// Step 1
+// Step 2
 //
-// Improve naming
-// Add 'use strict'
+// Add 'const'
+// Change from 'let' to 'const'
+// Remove unneeded code
 
 'use strict'
 
-let dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-getDayNumber = (input) => {
-  let i;
-  for (i = 0; i < dayNames.length; i++) {
+const getDayNumber = (input) => {
+  for (let i = 0; i < dayNames.length; i++) {
     if (input.startsWith(dayNames[i].toLowerCase())) {
       return i + 1;
     }
