@@ -1,15 +1,22 @@
 // Get day number
 
-let D = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+// Step 1
+//
+// Improve naming
+// Add 'use strict'
 
-_parse_day_ = (s) => {
+'use strict'
+
+let dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+getDayNumber = (input) => {
   let i;
-  for (i = 0; i < D.length; i++) {
-    if (s.startsWith(D[i].toLowerCase())) {
+  for (i = 0; i < dayNames.length; i++) {
+    if (input.startsWith(dayNames[i].toLowerCase())) {
       return i + 1;
     }
   }
   return -1;
 };
 
-module.exports = _parse_day_;
+module.exports = getDayNumber;
