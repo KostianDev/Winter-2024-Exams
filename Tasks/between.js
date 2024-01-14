@@ -1,26 +1,24 @@
 // Extract substring between prefix and suffix
 
-// Step 1
+// Step 2
 //
-// Add 'use strict'
+// Remove unneeded 'if' statement
 // Improve naming
 
 'use strict'
 
-getSubstringBetween = (string, prefix, suffix) => {
-  i = string.indexOf(prefix);
-  if (i === -1) return '';
+const getSubstringBetween = (string, prefix, suffix) => {
+  let startIndex = string.indexOf(prefix);
+  if (startIndex === -1) return '';
   else {
-    k = i + prefix.length;
-    string = string.substring(k);
-    if (suffix) {
-      i = string.indexOf(suffix);
-      if (i === -1) {
+    const endIndex = startIndex + prefix.length;
+    string = string.substring(endIndex);
+      startIndex = string.indexOf(suffix);
+      if (startIndex === -1) {
         return '';
       } else {
-        string = string.substring(0, i);
+        string = string.substring(0, startIndex);
       }
-    }
   }
   return string;
 };
