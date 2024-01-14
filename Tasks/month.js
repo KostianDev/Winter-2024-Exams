@@ -1,9 +1,9 @@
 // Get month number
 
-// Step 2
+// Step 3
 //
-// Add 'const'
-// Store lowercase input in separate variable
+// Change loop to for...of
+// Remove unneeded string
 
 'use strict'
 
@@ -23,9 +23,8 @@ const MONTHS_NAMES = [
 ];
 
 const getMonthNumber = (input) => {
-  const arrayLength = MONTHS_NAMES.length;
   const lowercaseInput = input.toLowerCase();
-  for (let i = 0; i < arrayLength; i++) {
+  for (const month of MONTHS_NAMES) {
     if (lowercaseInput.startsWith(MONTHS_NAMES[i])) return i + 1;
   }
   return -1;
