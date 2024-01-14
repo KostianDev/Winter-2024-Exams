@@ -1,13 +1,13 @@
 // Get month number
 
-// Step 1
+// Step 2
 //
-// Improve naming
-// add 'use strict'
+// Add 'const'
+// Store lowercase input in separate variable
 
 'use strict'
 
-MONTHS_NAMES = [
+const MONTHS_NAMES = [
   'jan',
   'feb',
   'mar',
@@ -22,10 +22,11 @@ MONTHS_NAMES = [
   'dec',
 ];
 
-getMonthNumber = (input) => {
-  arrayLength = MONTHS_NAMES.length;
+const getMonthNumber = (input) => {
+  const arrayLength = MONTHS_NAMES.length;
+  const lowercaseInput = input.toLowerCase();
   for (let i = 0; i < arrayLength; i++) {
-    if (input.toLowerCase().startsWith(MONTHS_NAMES[i])) return i + 1;
+    if (lowercaseInput.startsWith(MONTHS_NAMES[i])) return i + 1;
   }
   return -1;
 };
