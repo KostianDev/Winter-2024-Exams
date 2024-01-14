@@ -1,23 +1,23 @@
 // Return an array without duplicates
 
-// Step 1
+// Step 2
 //
-// Improve naming
-// Add 'use strict'
+// Add 'const' and 'let'
+// Replace loop with for...of
 
 'use strict'
 
-getDistinctArray = (initialArray) => {
-  distinctArray = new Set();
-  w = 0;
-  initialArray.forEach((element) => {
+const getDistinctArray = (initialArray) => {
+  const distinctArray = new Set();
+  let w = 0;
+  for (const element of initialArray) {
     if (distinctArray.has(element)) {
       delete initialArray[w];
     } else {
       distinctArray.add(element);
     }
     w++;
-  });
+  }
   return initialArray.filter
   (x => typeof x === 'number');
 };
