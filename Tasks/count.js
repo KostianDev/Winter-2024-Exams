@@ -1,19 +1,18 @@
 // Sum all number values in dict
 
-// Step 2
+// Step 3
 //
-// Add 'const' and 'let'
-// Improve naming
+// Replaced loop with for...of
+// Removed unneeded variable
 
 'use strict'
 
 const getNumberValuesSum = (object) => {
   let sum = 0;
   const keys = Object.keys(object);
-  keys.forEach((key) => {
-    const value = object[key];
-    if (typeof value === 'number') sum += value;
-  });
+  for (const key of keys) {
+    if (typeof object[key] === 'number') sum += object[key];
+  }
   return sum;
 };
 
