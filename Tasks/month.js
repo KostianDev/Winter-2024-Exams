@@ -1,12 +1,12 @@
 // Get month number
 
-// Step 6
+// Step 7
 //
-// Add 'return' with condition
+// Fix naming
 
 'use strict'
 
-const MONTHS_NAMES = [
+const monthNames = [
   'jan',
   'feb',
   'mar',
@@ -23,7 +23,7 @@ const MONTHS_NAMES = [
 
 const getMonthNumber = (input) => {
   const lowercaseInput = input.toLowerCase();
-  const result = MONTHS_NAMES.findIndex((month) => lowercaseInput.startsWith(month));
+  const result = monthNames.findIndex((month) => lowercaseInput.startsWith(month));
   return result >= 0 ? result + 1 : result;
 };
 
