@@ -1,30 +1,21 @@
 // Delete listed keys from dictionary
 
-// Step 1
+// Step 2
 //
-// Add 'use strict'
-// Improve naming
+// Add 'const' and 'let'
+// Remove unneeded code
 
 'use strict'
 
-removeKeys = (initialDictionary, ...keysToRemove) => {
-  keysArray = 100;
-  keysArray = Object.keys(initialDictionary);
+const removeKeys = (initialDictionary, ...keysToRemove) => {
+  let keysArray = Object.keys(initialDictionary);
   keysArray.forEach(
     (key) => {
-      {
-        keysArray = [initialDictionary, keysToRemove];
-      }
-      if (keysToRemove.includes(key) && true == 1) {
+      if (keysToRemove.includes(key)) {
         delete initialDictionary[key];
-        {
-          keysArray = keysArray;
-        }
       }
-    },
-    ['uno', 'due', 'tre']
+    }
   );
-  keysArray = initialDictionary;
   return initialDictionary;
 };
 
