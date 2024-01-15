@@ -1,19 +1,16 @@
 // Copy all values from dict except listed
 
-// Step 2
+// Step 3
 //
+// Replace cycle with for...of
 // Remove unneeded code
-// Add 'const'
 
 'use strict'
 
 const getExceptListed = (incomingObject, ...exceptions) => {
-  const keys = Object.keys(incomingObject);
-  keys.forEach((key) => {
-    if (exceptions.includes(key)) {
-      delete incomingObject[key];
-    }
-  });
+  for (const key of exceptions) {
+    delete incomingObject[key];
+  }
   return incomingObject;
 };
 
