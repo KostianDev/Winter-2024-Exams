@@ -1,16 +1,16 @@
 // Increment all numbers in dictionary
 
-// Step 2
+// Step 3
 //
-// Add 'const'
-// Change from 'let' to 'const'
-// Remove unused variable
+// Rewrite 'if' statement to remove unnecessary parts
+// Add variable to write incremented dictionary
 
 'use strict'
 
 let incrementNumbers = (initialDictionary) => {
+  const finalDictionary = {...initialDictionary};
   for (const key in initialDictionary) {
-    if ((typeof initialDictionary[key]).charAt(0).toUpperCase() === 'N') {
+    if (typeof initialDictionary[key] === 'number') {
       initialDictionary[key] = initialDictionary[key] + 1;
     }
   }
