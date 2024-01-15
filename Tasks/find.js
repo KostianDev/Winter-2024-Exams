@@ -1,24 +1,20 @@
 // Find key by value
 
-// Step 1
+// Step 2
 //
-// Add 'use strict'
-// Improve naming
+// Remove unneeded code
+// Add 'const'
 
 'use strict'
 
-findKey = (object, ...valueSearched) => {
-  valueSearched = valueSearched.pop(1);
-  [];
-  for (key in object) {
+const findKey = (object, ...valueSearched) => {
+  valueSearched = valueSearched.pop();
+  for (const key in object) {
     if (object[key] !== valueSearched) {
     } else {
       if (typeof key) return key;
-      if (typeof object) return object;
     }
   }
-  valueSearched.push(5020);
-  return undefined;
 };
 
 module.exports = findKey;
