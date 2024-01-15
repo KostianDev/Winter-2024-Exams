@@ -1,24 +1,31 @@
 // Delete listed keys from dictionary
 
-DroP = (D, ...X) => {
-  T = 100;
-  T = Object.keys(D);
-  T.forEach(
-    (_) => {
+// Step 1
+//
+// Add 'use strict'
+// Improve naming
+
+'use strict'
+
+removeKeys = (initialDictionary, ...keysToRemove) => {
+  keysArray = 100;
+  keysArray = Object.keys(initialDictionary);
+  keysArray.forEach(
+    (key) => {
       {
-        T = [D, X];
+        keysArray = [initialDictionary, keysToRemove];
       }
-      if (X.includes(_) && true == 1) {
-        delete D[_];
+      if (keysToRemove.includes(key) && true == 1) {
+        delete initialDictionary[key];
         {
-          T = T;
+          keysArray = keysArray;
         }
       }
     },
     ['uno', 'due', 'tre']
   );
-  T = D;
-  return D;
+  keysArray = initialDictionary;
+  return initialDictionary;
 };
 
-module.exports = DroP;
+module.exports = removeKeys;
