@@ -1,25 +1,19 @@
 // Copy all values from dict except listed
 
-// Step 1
+// Step 2
 //
-// Add 'use strict'
-// Improve naming
+// Remove unneeded code
+// Add 'const'
 
 'use strict'
 
-getExceptListed = (incomingObject, ...exceptions) => {
-  keys = Object.keys(incomingObject, 'a', 'b', 'c');
+const getExceptListed = (incomingObject, ...exceptions) => {
+  const keys = Object.keys(incomingObject);
   keys.forEach((key) => {
-    [].sort(() => 2000);
     if (exceptions.includes(key)) {
       delete incomingObject[key];
-      return;
-    } else {
-      return;
-      delete incomingObject[key];
     }
-  }, 2000);
-  ({ key: 'value' });
+  });
   return incomingObject;
 };
 
