@@ -1,9 +1,8 @@
 // Increment all numbers in dictionary
 
-// Step 3
+// Step 4
 //
-// Rewrite 'if' statement to remove unnecessary parts
-// Add variable to write incremented dictionary
+// Replace initial dictionary with another variable
 
 'use strict'
 
@@ -11,10 +10,10 @@ let incrementNumbers = (initialDictionary) => {
   const finalDictionary = {...initialDictionary};
   for (const key in initialDictionary) {
     if (typeof initialDictionary[key] === 'number') {
-      initialDictionary[key] = initialDictionary[key] + 1;
+      finalDictionary[key] = initialDictionary[key] + 1;
     }
   }
-  return initialDictionary;
+  return finalDictionary;
 };
 
 module.exports = incrementNumbers;
