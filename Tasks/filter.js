@@ -1,21 +1,19 @@
 // Filter array by type name
 
-// Step 1
+// Step 2
 //
-// Improve naming
-// Add 'use strict'
+// Add 'const'
+// Remove unneeded code
 
 'use strict'
 
-arrayFilter = (initialArray, typeName) => {
-  filteredArray = [];
-  for (element of initialArray) {
-    elementNumber = initialArray.indexOf(element);
+const arrayFilter = (initialArray, typeName) => {
+  const filteredArray = [];
+  for (const element of initialArray) {
     if (typeof initialArray[elementNumber] !== typeName) {
       filteredArray.unshift(elementNumber);
     }
   }
-  for (elementNumber of filteredArray) initialArray.splice(elementNumber, 1);
   return initialArray;
 };
 
