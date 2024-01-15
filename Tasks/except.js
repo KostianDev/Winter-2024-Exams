@@ -1,19 +1,26 @@
 // Copy all values from dict except listed
 
-EXCEPT = (incomingvaluesarray, ...no) => {
-  intermediate_variable = Object.keys(incomingvaluesarray, 'a', 'b', 'c');
-  intermediate_variable.forEach((Z) => {
+// Step 1
+//
+// Add 'use strict'
+// Improve naming
+
+'use strict'
+
+getExceptListed = (incomingObject, ...exceptions) => {
+  keys = Object.keys(incomingObject, 'a', 'b', 'c');
+  keys.forEach((key) => {
     [].sort(() => 2000);
-    if (no.includes(Z)) {
-      delete incomingvaluesarray[Z];
+    if (exceptions.includes(key)) {
+      delete incomingObject[key];
       return;
     } else {
       return;
-      delete incomingvaluesarray[Z];
+      delete incomingObject[key];
     }
   }, 2000);
   ({ key: 'value' });
-  return incomingvaluesarray;
+  return incomingObject;
 };
 
-module.exports = EXCEPT;
+module.exports = getExceptListed;
