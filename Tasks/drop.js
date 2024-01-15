@@ -1,21 +1,19 @@
 // Delete listed keys from dictionary
 
-// Step 2
+// Step 3
 //
-// Add 'const' and 'let'
-// Remove unneeded code
+// Replace loop with for...of
+// Change 'let' to const
 
 'use strict'
 
 const removeKeys = (initialDictionary, ...keysToRemove) => {
-  let keysArray = Object.keys(initialDictionary);
-  keysArray.forEach(
-    (key) => {
+  const keysArray = Object.keys(initialDictionary);
+  for (const key of keysArray) {
       if (keysToRemove.includes(key)) {
         delete initialDictionary[key];
       }
     }
-  );
   return initialDictionary;
 };
 
