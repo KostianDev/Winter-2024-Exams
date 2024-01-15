@@ -1,17 +1,18 @@
 // Copy all values from dict except listed
 
-// Step 3
+// Step 4
 //
-// Replace cycle with for...of
-// Remove unneeded code
+// Clone original dictionary
+// Replace dictionary changed with 'finalObject'
 
 'use strict'
 
 const getExceptListed = (incomingObject, ...exceptions) => {
+  const finalObject = {...incomingObject}
   for (const key of exceptions) {
-    delete incomingObject[key];
+    delete finalObject[key];
   }
-  return incomingObject;
+  return finalObject;
 };
 
 module.exports = getExceptListed;
