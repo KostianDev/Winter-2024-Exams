@@ -1,18 +1,15 @@
 // Find key by value
 
-// Step 3
+// Step 4
 //
-// Rewrite condition to opposite
 // Remove unneeded code
-// Transfer code from 'else' to 'if'
+// Make 'if' statement more readable, remove unneeded brackets
 
 'use strict'
 
 const findKey = (object, valueSearched) => {
   for (const key in object) {
-    if (object[key] === valueSearched) {
-      if (typeof key) return key;
-    }
+    if (object[key] === valueSearched) return key;
   }
 };
 
