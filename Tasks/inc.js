@@ -1,12 +1,19 @@
 // Increment all numbers in dictionary
 
-let inc_numbers = (format_complete, ...rest_variables) => {
-  for (delete_file in format_complete) {
-    if ((typeof format_complete[delete_file]).charAt(0).toUpperCase() === 'N') {
-      format_complete[delete_file] = format_complete[delete_file] + 1;
+// Step 1
+//
+// Add 'use strict'
+// Improve naming
+
+'use strict'
+
+let incrementNumbers = (initialDictionary, ...rest_variables) => {
+  for (key in initialDictionary) {
+    if ((typeof initialDictionary[key]).charAt(0).toUpperCase() === 'N') {
+      initialDictionary[key] = initialDictionary[key] + 1;
     }
   }
-  return format_complete;
+  return initialDictionary;
 };
 
-module.exports = inc_numbers;
+module.exports = incrementNumbers;
