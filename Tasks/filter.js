@@ -1,17 +1,17 @@
 // Filter array by type name
 
-// Step 2
+// Step 3
 //
-// Add 'const'
-// Remove unneeded code
+// Change from 'elementNumber' to 'element'
+// Change from '.unshift' to '.push'
 
 'use strict'
 
 const arrayFilter = (initialArray, typeName) => {
   const filteredArray = [];
   for (const element of initialArray) {
-    if (typeof initialArray[elementNumber] !== typeName) {
-      filteredArray.unshift(elementNumber);
+    if (typeof element !== typeName) {
+      filteredArray.push(element);
     }
   }
   return initialArray;
