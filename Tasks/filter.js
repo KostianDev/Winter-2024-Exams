@@ -1,20 +1,20 @@
 // Filter array by type name
 
-// Step 3
+// Step 4
 //
-// Change from 'elementNumber' to 'element'
-// Change from '.unshift' to '.push'
+// Changed condition to opposite
+// Now return 'filteredArray' to keep original Array unchanged
 
 'use strict'
 
 const arrayFilter = (initialArray, typeName) => {
   const filteredArray = [];
   for (const element of initialArray) {
-    if (typeof element !== typeName) {
+    if (typeof element === typeName) {
       filteredArray.push(element);
     }
   }
-  return initialArray;
+  return filteredArray;
 };
 
 module.exports = arrayFilter;
