@@ -1,17 +1,18 @@
 // Delete listed keys from dictionary
 
-// Step 3
+// Step 4
 //
-// Remove unneeded code
-// Change array iterated
+// Create another object not to mutate initial one
+// Change object modificated to 'finalDictionary'
 
 'use strict'
 
 const removeKeys = (initialDictionary, ...keysToRemove) => {
+  const finalDictionary = {...initialDictionary};
   for (const key of keysToRemove) {
-        delete initialDictionary[key];
+        delete finalDictionary[key];
     }
-  return initialDictionary;
+  return finalDictionary;
 };
 
 module.exports = removeKeys;
