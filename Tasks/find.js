@@ -1,17 +1,16 @@
 // Find key by value
 
-// Step 2
+// Step 3
 //
+// Rewrite condition to opposite
 // Remove unneeded code
-// Add 'const'
+// Transfer code from 'else' to 'if'
 
 'use strict'
 
-const findKey = (object, ...valueSearched) => {
-  valueSearched = valueSearched.pop();
+const findKey = (object, valueSearched) => {
   for (const key in object) {
-    if (object[key] !== valueSearched) {
-    } else {
+    if (object[key] === valueSearched) {
       if (typeof key) return key;
     }
   }
