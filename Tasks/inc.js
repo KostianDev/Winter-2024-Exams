@@ -1,14 +1,15 @@
 // Increment all numbers in dictionary
 
-// Step 1
+// Step 2
 //
-// Add 'use strict'
-// Improve naming
+// Add 'const'
+// Change from 'let' to 'const'
+// Remove unused variable
 
 'use strict'
 
-let incrementNumbers = (initialDictionary, ...rest_variables) => {
-  for (key in initialDictionary) {
+let incrementNumbers = (initialDictionary) => {
+  for (const key in initialDictionary) {
     if ((typeof initialDictionary[key]).charAt(0).toUpperCase() === 'N') {
       initialDictionary[key] = initialDictionary[key] + 1;
     }
